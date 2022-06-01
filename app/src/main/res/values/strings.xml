@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Gif Searcher</string>
+    <string name="weirdness_slider_description">How weird the gifs should be in scale of 1 to 10.</string>
+    <string name="weirdness_slider_header">Weirdness: %1$s</string>
+    <string name="toolbar_search_title">Search</string>
+    <string name="search_hint">gif name</string>
+    <string name="gipfy_api_key">fnNKGD17rvwCeGq3UdL3eOQEpVYoHCAh</string>
+    <string name="giphy_gif_api">https://api.giphy.com/v1/gifs/</string>
+    <string name="untitled">Untitled</string>
+    <string name="no_fragment_msg">Please search and choose a gif.</string>
+    <string name="gif_content_description">Currently selected gif</string>
+</resources>

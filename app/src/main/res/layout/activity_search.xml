@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".search.SearchActivity">
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/MaterialSearchBarLight"
+        app:mt_speechMode="false"
+        app:mt_searchIconDrawable="@drawable/ic_baseline_search_24"
+        app:mt_hint="@string/search_hint"
+        app:mt_backIconDrawable="@drawable/ic_baseline_arrow_back_24"
+        app:mt_roundedSearchBarEnabled="false"
+        app:mt_placeholder="@string/app_name"
+        app:mt_searchBarColor="?attr/colorPrimary"
+        app:mt_hintColor="@color/grey"
+        app:mt_textColor="?attr/colorOnPrimary"
+        app:mt_placeholderColor="?attr/colorOnPrimary"
+        app:mt_backIconTint="?attr/colorOnPrimary"
+        app:mt_clearIconTint="?attr/colorOnPrimary"
+        app:mt_searchIconTint="?attr/colorOnPrimary"
+        app:mt_textCursorTint="?attr/colorOnPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchBar" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_result_recycler"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:elevation="10dp"
+        />
+
+    <TextView
+        android:id="@+id/result_overlay"
+        android:background="?attr/colorSurface"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:elevation="9dp"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/gif_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
