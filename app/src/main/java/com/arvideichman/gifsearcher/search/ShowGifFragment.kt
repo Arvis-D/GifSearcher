@@ -26,7 +26,7 @@ class ShowGifFragment : Fragment() {
         model.chosenGif.observe(this) {
             if (it == null) return@observe
             Glide.with(this)
-                .load(it.images.preview.url)
+                .load(it.images.original.url)
                 .fitCenter()
                 .into(b.gifImage)
 
